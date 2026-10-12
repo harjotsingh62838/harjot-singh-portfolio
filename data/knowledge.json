@@ -1,0 +1,54 @@
+[
+  {
+    "source": "harjot_singh_resume.pdf",
+    "text": "                                       HARJOT SINGH\n                                     DATA SCIENCE & AI GRADUATE\n                     Anandpur Sahib, Punjab, India | +91 9464641102 | harjotsingh3296@gmail.com\n\n\nPROFESSIONAL SUMMARY\nMotivated B.Sc. Computer Science graduate (Result Awaited) with foundational hands-on internship experience\nspanning Data Science, Python Development, and Artificial Intelligence. Proficient in building predictive models,\nmanipulating complex datasets, and translating raw data into actionable visual insights. A strong communicator\nskilled at bridging the gap between technical data workflows and business insights, eager to contribute technical\nskills to innovative, data-driven software and AI engineering teams.\n\nTECHNICAL & COMPUTER SKILLS\nProgramming:               Python, SQL\nComputer Skills:           MS Office (Excel, Word, PowerPoint), Google Sheets\nLibraries & Tools:         Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, Git/GitHub\nData & AI Concepts:        Data Preprocessing, Machine Learning Fundamentals, Exploratory Data Analysis (EDA),\n                           Predictive Modeling\n\n\nPROFESSIONAL EXPERIENCE\nVIDYA VEDIC                                                                                 Feb 2026 \u2013 Apr 2026\nData Science Intern (Remote)\nYHILLS EDUTECH PRIVATE LIMITED                                                               Jun 2025 \u2013 Jul 2025\nPython Intern (Remote)\nEXTERNS                                                                                     Feb 2025 \u2013 Mar 2025\nAI Intern (Remote)\n\nEDUCATION\nDAV UNIVERSITY                                                                             Result Awaited (2026)\nBachelor of Science (B.Sc.) in Computer Science \u2013 Jalandhar, Punjab\nPUNJAB SCHOOL EDUCATION BOARD (PSEB)                                                              Completed: 2023\nHigher Secondary School Certificate (+2), Non-Medical Stream \u2013 Punjab, India\n\nCORE SOFT SKILLS & COMMUNICATION\nClear Technical Communication: Adept at translating complex data findings, algorithmic logic, and technical\nmetrics into clear, actionable insights for both technical teams and non-technical stakeholders.\nCollaborative Teamwork: Proven track record of working effectively across remote cross-functional teams,\ncontributing actively to code reviews, debugging workflows, and collective problem-solving.\nAnalytical & Critical Thinking: Skilled at dissecting unstructured problems, analyzing data patterns, and\ndesigning structured, logical solutions.\nAdaptability & Continuous Learning: Highly responsive to evolving project requirements and fast-paced tech\nenvironments, with a strong drive to master new AI frameworks and methodologies.\n\nLANGUAGES\nEnglish   Hindi      Punjabi\n\f"
+  },
+  {
+    "source": "untitled15.py, steps 1\u20138",
+    "text": "The Honey AI Voice Receptionist loads company information from a Word document, splits it into overlapping chunks, embeds them with all-MiniLM-L6-v2, and stores them in ChromaDB. It retrieves relevant chunks for each question and asks Groq to generate a grounded response. Users can type, or speak through Whisper transcription; pyttsx3 reads responses aloud."
+  },
+  {
+    "source": "requirements.txt; untitled15.py",
+    "text": "The uploaded project uses Python, python-docx, NumPy, SciPy, sounddevice, pyttsx3, OpenAI Whisper, ChromaDB, python-dotenv, SentenceTransformers, LangChain text splitters, and Groq. The embedding model is all-MiniLM-L6-v2; Whisper uses tiny.en. BeautifulSoup is imported but isn\u2019t used in the supplied implementation."
+  },
+  {
+    "source": "untitled15.py, VoiceRecorderSTT and speak_text; website implementation",
+    "text": "In the Python project, sounddevice records microphone audio at 16 kHz, Whisper tiny.en transcribes it, and pyttsx3 speaks the response at a configured rate of 160 words per minute. This website instead uses your browser\u2019s speech recognition and speech synthesis when supported. Browser dictation requires microphone permission."
+  },
+  {
+    "source": "untitled15.py, steps 2\u20134",
+    "text": "The project splits text into 400-character chunks with 60-character overlap. SentenceTransformer all-MiniLM-L6-v2 produces 384-dimensional embeddings stored in a persistent ChromaDB collection. Each query retrieves up to three chunks to provide context for Groq."
+  },
+  {
+    "source": "requirements.txt; untitled15.py",
+    "text": "For the original Python project, install requirements.txt, place the Word knowledge base beside the script, and set GROQ_API_KEY in a .env file. A first-run bug needs correcting: initialize_vector_store must return (collection, embedding_model) after both new indexing and existing-collection paths; the uploaded version only returns in the else branch. Microphone access and downloadable model files are also needed for voice mode."
+  },
+  {
+    "source": "Honey_Company_Knowledge_Base.docx, section 2",
+    "text": "According to the uploaded knowledge base, Honey offers custom software and web application development, AI and machine learning, cloud infrastructure and DevOps, and enterprise technology consulting. Its AI capabilities include NLP, RAG pipelines, conversational voice agents, and predictive analytics."
+  },
+  {
+    "source": "Honey_Company_Knowledge_Base.docx, section 1",
+    "text": "The supplied knowledge base describes Honey as a full-service technology and digital solutions company helping businesses through software, cloud modernization, data engineering, and AI. It serves startups, mid-market businesses, and global enterprises. These are company details supplied for the project, not claims about Harjot\u2019s employment."
+  },
+  {
+    "source": "Honey_Company_Knowledge_Base.docx, section 3",
+    "text": "The supplied document lists Honey headquarters hours as Monday\u2013Friday, 9 AM\u20136 PM EST. It says technical support operates 24/7 for enterprise SLA clients. No physical office address was provided."
+  },
+  {
+    "source": "Honey_Company_Knowledge_Base.docx, section 4",
+    "text": "The uploaded Honey document lists contact@honey.com for general inquiries, sales@honey.com for new accounts, https://support.honey.com for support, and +1 (800) 555-0199 for phone contact. These are supplied company/project details and have not been independently verified; they are not Harjot\u2019s personal contact information."
+  },
+  {
+    "source": "Honey_Company_Knowledge_Base.docx, section 4",
+    "text": "The supplied company document states that Honey does not offer fixed pricing because projects are customized. Formal quotes, contracts, and payment questions go to its business development team. No personal freelance rates for Harjot were supplied."
+  },
+  {
+    "source": "app(1).py; date22.ipynb; customer_churn_nlp.csv",
+    "text": "Customer Churn & NLP Risk Analytics is a Streamlit app comparing Logistic Regression and Random Forest, with exploratory charts, confusion matrices, classification reports, feature importance, individual prediction, and batch CSV export. Numeric features are tenure, monthly charges and support tickets; contracts are one-hot encoded; feedback uses TF-IDF with max_features=15 and unigrams/bigrams. The supplied CSV has 7043 rows and no feedback or support-ticket columns. The app synthesizes those from churn labels, which is target leakage. The notebook uses 500 rows and records 100% accuracy, but this is not valid evidence of generalization. TF-IDF is fitted before the test split in this app, another leakage issue. Describe these as learning projects, not production systems. No live prediction app is hosted here; source ZIP is downloadable."
+  },
+  {
+    "source": "app(2).py; date_24_spam_mail.ipynb; spam.csv",
+    "text": "SMS Spam Detection & NLP Playground is a Streamlit app using NLTK tokenization, punctuation/stopword removal, Porter stemming or WordNet lemmatization, TF-IDF with max_features=2500, and Multinomial Naive Bayes. Features: step-by-step preprocessing, BoW versus TF-IDF, model comparisons, confusion matrices and reports, individual SMS classification, and batch CSV scanning. Dataset has 5572 messages: 4825 ham and 747 spam. Notebook records 97.67% test accuracy for stemming and 97.94% for lemmatization on a stratified 80/20 split with random_state=42. These are saved notebook results, not independently rerun. A ham prediction does not guarantee safety. Source ZIP is downloadable; app is not hosted here."
+  }
+]

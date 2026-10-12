@@ -1,0 +1,20 @@
+[Unit]
+Description=Harjot Portfolio
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=portfolio
+WorkingDirectory=/opt/harjot-portfolio
+EnvironmentFile=/opt/harjot-portfolio/.env
+ExecStart=/usr/bin/node /opt/harjot-portfolio/server.mjs
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

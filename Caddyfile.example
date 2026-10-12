@@ -1,0 +1,4 @@
+# Replace this hostname, save as Caddyfile, and run Caddy on your server.
+portfolio.example.com {
+    reverse_proxy 127.0.0.1:3000
+}
